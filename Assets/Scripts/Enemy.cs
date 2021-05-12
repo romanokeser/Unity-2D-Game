@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
+    public Transform Player { get => player; set => player = value; }
+
     private Rigidbody2D rb;
     private Vector2 movement;
     public float moveSpeed = 5f;
+
+
     // Start is called before the first frame update
     void Start()
     {
