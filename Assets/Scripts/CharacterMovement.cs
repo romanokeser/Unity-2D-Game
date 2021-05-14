@@ -8,12 +8,15 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Transform playerTip;
     [SerializeField] private GameObject bullet;
     // player movement
-    [SerializeField] private float speed = 20f;
+    //[SerializeField] private float speed = 20f;
 
     private Vector2 lookDirection;
     private float lookAngle;
 
     private float move, moveSpeed, rotation, rotateSpeed;
+    public float characterMovementSpeed;
+
+    private Rigidbody2D rb2d;
 
 
     private void Start()
@@ -26,20 +29,28 @@ public class CharacterMovement : MonoBehaviour
     {
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 0f); //or -90f ??
+        transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f); //or -90f ??
 
         //player movement
-        //Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //this.transform.position += Movement * speed * Time.deltaTime;
 
         move = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
         rotation = Input.GetAxisRaw("Horizontal") * -rotateSpeed * Time.deltaTime;
 
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
-        // e bas prica sad za vjezbe.. dns mi je prvo predavanje... 
-        // reko je da ce zavrsit pa sad prica jos o tome.-.. :D min
+        //Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //this.transform.position += Movement * speed * Time.deltaTime;
 
-        //nema zurbe
+        //move = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
+        //rotation = Input.GetAxisRaw("Horizontal") * -rotateSpeed * Time.deltaTime;
+
+
+
+        //Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        //rb2d.AddForce(movement * characterMovementSpeed);
+
+
 
         if (Input.GetMouseButton(0))    //fire a bullet
         {

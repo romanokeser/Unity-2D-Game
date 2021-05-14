@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 500f;
 
 
     // Start is called before the first frame update
