@@ -59,10 +59,7 @@ public class EnemySpawnController : MonoBehaviour
 
     }
 
-    public void IspisTeksta(int a, int b)
-    {
-        Debug.Log(a+b);
-    }
+    
 
 
 }
