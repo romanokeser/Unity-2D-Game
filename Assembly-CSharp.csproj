@@ -57,12 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnController.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Materials\Background Shader.shader" />
+     <None Include="Assets\EnemyShader.shader" />
+     <None Include="Assets\RainbowGradient.shader" />
+     <None Include="Assets\Materials\BackgroundShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
