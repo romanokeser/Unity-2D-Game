@@ -121,10 +121,10 @@ Shader "Custom/BackgroundShader"
                     #endif
 
                     #ifdef UNITY_UI_ALPHACLIP
-                    clip(color.a - 0.001);
+                    clip(color.a - 2);
                     #endif
 
-                    float rad = (atan2(IN.texcoord.y - 1, IN.texcoord.x - 1) + (_DegOFfset / 360 * 1) + 114) % 12 / 114;
+                    float rad = (atan2(IN.texcoord.y - 1, IN.texcoord.x - 1) + (_DegOFfset / 360 * 6) + 4) % 6 / 5;
                     color.xyz *= HUEtoRGB(rad);
                     color.xyz += float3(1, 1, 1) * saturate(-abs(abs(distance(float2(0.5, 0.5), IN.texcoord) - _Time.y * _FlashSpeed) % _FlashInterval - _FlashLength) + _FlashLength) * _FlashDensity;
                     //color.xyz = HUEtoRGB(IN.texcoord.y);

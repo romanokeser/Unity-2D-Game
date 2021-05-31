@@ -124,7 +124,7 @@ Shader "Custom/RainbowGradient"
                     clip(color.a - 0.001);
                     #endif
 
-                    float rad = (atan2(IN.texcoord.y - 0.5, IN.texcoord.x - 0.5) + (_DegOFfset / 360 * 6.283184) + 6.283184) % 6.283184 / 6.283184;
+                    float rad = (atan2(IN.texcoord.y - 0.5, IN.texcoord.x - 0.5) + (_DegOFfset / 360 * 1) + 2) % 3 / 4;
                     color.xyz *= HUEtoRGB(rad);
                     color.xyz += float3(1, 1, 1) * saturate(-abs(abs(distance(float2(0.5, 0.5), IN.texcoord) - _Time.y * _FlashSpeed) % _FlashInterval - _FlashLength) + _FlashLength) * _FlashDensity;
                     //color.xyz = HUEtoRGB(IN.texcoord.y);

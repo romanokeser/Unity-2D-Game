@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField] private float radius;
 
-    public float deleteBulletTimer;
+    [SerializeField] public float deleteBulletTimer = 0.3f;
     // player movement
     //[SerializeField] private float speed = 20f;
   
@@ -26,22 +26,20 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
+        Destroy(bullet, deleteBulletTimer);
+
         moveSpeed = 15f;
         rotateSpeed = 100f;
 
         //Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         center = Camera.main.WorldToScreenPoint(Input.mousePosition);
 
-
+        
         
     }
 
     void Update()
     {
-        
-        Debug.Log("mouse pos " + Input.mousePosition);
-        Debug.Log("cemra pos " + Camera.main.WorldToScreenPoint(transform.position));
-
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
@@ -84,9 +82,9 @@ public class CharacterMovement : MonoBehaviour
         }
         
         deleteBulletTimer += 1.0f * Time.deltaTime; //ne radi jer zeli brisati bullet iz assetsa a ne clone
-        if (deleteBulletTimer >= 4)
+        if (deleteBulletTimer >= 0.5)
         {
-            Destroy(GameObject.FindGameObjectWithTag("BulletClone"), 1.5f);
+            Destroy(GameObject.FindGameObjectWithTag("BulletClone"), 0.1f);
         }
         
     }
