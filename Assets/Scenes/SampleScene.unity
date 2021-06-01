@@ -781,6 +781,7 @@ MonoBehaviour:
   radius: 6.2
   deleteBulletTimer: 0
   characterMovementSpeed: 3.3
+  speed: 12.73
 --- !u!58 &749370599
 CircleCollider2D:
   m_ObjectHideFlags: 0

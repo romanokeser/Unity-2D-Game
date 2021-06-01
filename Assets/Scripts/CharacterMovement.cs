@@ -17,19 +17,25 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 lookDirection;
     private float lookAngle;
 
-    private float move, moveSpeed, rotation, rotateSpeed;
+    private float xPos, rotation;
+    Vector3 movement;
     public float characterMovementSpeed;
 
     //public Camera camera;
     //public float radius = 3f;
+
     private Vector2 center;
+
+    //player movement
+    public float speed = 10f;
+
 
     private void Start()
     {
-        Destroy(bullet, deleteBulletTimer);
+        //Destroy(bullet, deleteBulletTimer);
 
-        moveSpeed = 15f;
-        rotateSpeed = 100f;
+        //moveSpeed = 15f;
+        
 
         //Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         center = Camera.main.WorldToScreenPoint(Input.mousePosition);
@@ -45,36 +51,32 @@ public class CharacterMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
 
         //player movement
+        Vector3 pos = transform.position;
 
-        move = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        rotation = Input.GetAxisRaw("Horizontal") * -rotateSpeed * Time.deltaTime;
+        if (Input.GetKey("w"))
+        {
+            pos.y += speed * Time.deltaTime;
+        }
+        if (Input.GetKey("s"))
+        {
+            pos.y -= speed * Time.deltaTime;
+        }
+        if (Input.GetKey("d"))
+        {
+            pos.x += speed * Time.deltaTime;
+        }
+        if (Input.GetKey("a"))
+        {
+            pos.x -= speed * Time.deltaTime;
+        }
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        transform.position = pos;
 
-        
 
         if (Vector2.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position) < 4f)
         {
             return;
         }
-
-        
-
-
-
-        //Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        //this.transform.position += Movement * speed * Time.deltaTime;
-
-        //move = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
-        //rotation = Input.GetAxisRaw("Horizontal") * -rotateSpeed * Time.deltaTime;
-
-
-
-        //Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        //rb2d.AddForce(movement * characterMovementSpeed);
-
-
 
         if (Input.GetMouseButton(0))    //fire a bullet
         {
@@ -96,7 +98,7 @@ public class CharacterMovement : MonoBehaviour
             return;
         }
 
-        transform.Translate(0f, move, 0f);
+        transform.Translate(0f, xPos, 0f);
         transform.Rotate(0f, 0f, rotation);
 
         
