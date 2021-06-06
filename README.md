@@ -9,3 +9,11 @@
 - Player movement, aiming and shooting objects
 - Random enemies spawn
 - Shaders and visual effects
+
+# Screenshots
+
+
+![Screenshot of gameplay](https://github.com/romanokeser/Unity-2D-Game/blob/master/Screenshot_1.png)
+
+
+![Screenshot of gameplay](https://github.com/romanokeser/Unity-2D-Game/blob/master/Screenshot_2.png)
