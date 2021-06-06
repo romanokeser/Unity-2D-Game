@@ -65,7 +65,7 @@ Material:
     - _FlashDensity: 4
     - _FlashInterval: 4
     - _FlashLength: 0.293
-    - _FlashSpeed: 2.12
+    - _FlashSpeed: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

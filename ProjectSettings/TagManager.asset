@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BulletClone
+  - enemy
   layers:
   - Default
   - TransparentFX

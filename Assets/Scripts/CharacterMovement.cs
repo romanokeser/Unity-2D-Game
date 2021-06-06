@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -29,6 +31,11 @@ public class CharacterMovement : MonoBehaviour
     //player movement
     public float speed = 10f;
 
+    [Space(10)]
+    [SerializeField] private float playerhealth;
+    [SerializeField] private float enemyDamage;
+    [SerializeField] private float bulletFireDelay;
+    private bool _enableBulletInstantiate = true;
 
     private void Start()
     {
@@ -80,13 +87,18 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0))    //fire a bullet
         {
-            FireBullet();
+            if (_enableBulletInstantiate)
+            {
+                _enableBulletInstantiate = false;
+                StartCoroutine(BulletDelay());
+                FireBullet();
+            }
         }
         
-        deleteBulletTimer += 1.0f * Time.deltaTime; //ne radi jer zeli brisati bullet iz assetsa a ne clone
+        deleteBulletTimer += 1.0f * Time.deltaTime; 
         if (deleteBulletTimer >= 0.5)
         {
-            Destroy(GameObject.FindGameObjectWithTag("BulletClone"), 0.1f);
+            Destroy(GameObject.FindGameObjectWithTag("BulletClone"), 10.0f);
         }
         
     }
@@ -109,4 +121,40 @@ public class CharacterMovement : MonoBehaviour
         GameObject firedBullet = Instantiate(bullet, playerTip.position, playerTip.rotation);
         firedBullet.GetComponent<Rigidbody2D>().velocity = playerTip.up * 20f;
     }
+
+    IEnumerator BulletDelay()
+    {
+        yield return new WaitForSeconds(bulletFireDelay);
+        _enableBulletInstantiate = true;
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            playerhealth -= enemyDamage;
+
+            //Destroy(collision.gameObject);
+
+            CheckPlayerHealthStatus();
+        }
+    }
+
+    private void CheckPlayerHealthStatus()
+    {
+        if (playerhealth <= 0.0f)
+        {
+            Debug.Log("Player is death!!");
+            //SceneManager.LoadScene(0);
+            StartCoroutine(DelaySceneLoading());
+        }
+    }
+
+    IEnumerator DelaySceneLoading()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(0);
+    }
+
 }

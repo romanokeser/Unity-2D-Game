@@ -476,13 +476,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482039952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0041645765, y: 0.4937495}
+  m_Offset: {x: -0.44790882, y: 0.4937495}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -493,7 +493,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.97970676, y: 0.066219}
+  m_Size: {x: 0.07556, y: 0.06621897}
   m_EdgeRadius: 0
 --- !u!61 &482039956
 BoxCollider2D:
@@ -502,7 +502,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482039952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -528,7 +528,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482039952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -554,7 +554,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482039952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 749370596}
   - component: {fileID: 749370597}
   - component: {fileID: 749370599}
+  - component: {fileID: 749370600}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -782,6 +783,9 @@ MonoBehaviour:
   deleteBulletTimer: 0
   characterMovementSpeed: 3.3
   speed: 12.73
+  playerhealth: 100
+  enemyDamage: 25
+  bulletFireDelay: 1
 --- !u!58 &749370599
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -798,6 +802,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.030870063}
   serializedVersion: 2
   m_Radius: 0.2013839
+--- !u!114 &749370600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749370594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbf340bb655ea64c985df012d8d3d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 0
 --- !u!1 &949827151
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,9 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnController.cs" />
+    <Compile Include="Assets\Scripts\Health and Logic\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Health and Logic\ScoreAndHealthSystem.cs" />
+    <Compile Include="Assets\Scripts\Health and Logic\EnemyAttack.cs" />
+    <Compile Include="Assets\enemyAttack.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\EnemyShader.shader" />

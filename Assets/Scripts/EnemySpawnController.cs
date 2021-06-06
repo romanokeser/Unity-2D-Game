@@ -26,6 +26,8 @@ public class EnemySpawnController : MonoBehaviour
     {
         _timeCounter = 0.0f;
         _enemySpawnCounter = 0;
+
+        SpawnEnemy();
     }
 
     private void Update()
@@ -36,7 +38,7 @@ public class EnemySpawnController : MonoBehaviour
         {
             _timeCounter = 0.0f;
 
-            SpawnEnemy();
+            //SpawnEnemy();
         }
 
     }// end of update
