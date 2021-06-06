@@ -12,7 +12,7 @@
 
 # Gameplay and Screenshots
 
-![Gameplay](gameplay.gif)
+![Gameplay](gameplay.mp4)
 
 ![Screenshot of gameplay](https://github.com/romanokeser/Unity-2D-Game/blob/master/Screenshot_1.png)
 
