@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] public float deleteBulletTimer = 0.3f;
     // player movement
     //[SerializeField] private float speed = 20f;
-  
+
     private Vector2 lookDirection;
     private float lookAngle;
 
@@ -42,15 +42,15 @@ public class CharacterMovement : MonoBehaviour
         //Destroy(bullet, deleteBulletTimer);
 
         //moveSpeed = 15f;
-        
+
 
         //Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         center = Camera.main.WorldToScreenPoint(Input.mousePosition);
 
-        
-        
-    }
 
+
+    }
+    
     void Update()
     {
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -94,13 +94,13 @@ public class CharacterMovement : MonoBehaviour
                 FireBullet();
             }
         }
-        
-        deleteBulletTimer += 1.0f * Time.deltaTime; 
+
+        deleteBulletTimer += 1.0f * Time.deltaTime;
         if (deleteBulletTimer >= 0.5)
         {
             Destroy(GameObject.FindGameObjectWithTag("BulletClone"), 10.0f);
         }
-        
+
     }
     private void LateUpdate()
     {
@@ -113,7 +113,7 @@ public class CharacterMovement : MonoBehaviour
         transform.Translate(0f, xPos, 0f);
         transform.Rotate(0f, 0f, rotation);
 
-        
+
     }
 
     private void FireBullet()

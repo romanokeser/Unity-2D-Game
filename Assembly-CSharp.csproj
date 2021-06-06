@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CE0E24C4-F5CE-686F-E0C0-A402A79B9D92}</ProjectGuid>
+    <ProjectGuid>{3BD99DA7-BD93-6366-344B-4F2C33A41684}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,9 +61,10 @@
     <Compile Include="Assets\enemyAttack.cs" />
     <Compile Include="Assets\Scripts\Health and Logic\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Health and Logic\EnemyHealth.cs" />
+    <Compile Include="Assets\BackgroundEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnController.cs" />
-    <Compile Include="Assets\BackgroundEffect.cs" />
+    <Compile Include="Assets\screenShake.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\EnemyShader.shader" />
