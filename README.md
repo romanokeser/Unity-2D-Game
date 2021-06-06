@@ -10,8 +10,9 @@
 - Random enemies spawn
 - Shaders and visual effects
 
-# Screenshots
+# Gameplay and Screenshots
 
+![](https://media.giphy.com/media/ZJa0VNVHg8p4GTpzwf/giphy.gif)
 
 ![Screenshot of gameplay](https://github.com/romanokeser/Unity-2D-Game/blob/master/Screenshot_1.png)
 
