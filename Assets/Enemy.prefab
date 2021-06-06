@@ -79,10 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654d76770519f4846a529355b1429997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.34
-  enemyhealth: 100
+  moveSpeed: 11.35
+  enemyhealth: 500
   bulletDamage: 40
-  shader: {fileID: 0}
   material: {fileID: 2100000, guid: 0f0da0916ec18f344b0427fb52ab3599, type: 2}
 --- !u!212 &2607848406818520899
 SpriteRenderer:
@@ -169,9 +168,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17905937}
+  m_Offset: {x: 0, y: -0.0016155392}
   serializedVersion: 2
-  m_Radius: 0.6089149
+  m_Radius: 0.491735
 --- !u!114 &5594237330364684644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +178,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2607848406818520896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdbf340bb655ea64c985df012d8d3d02, type: 3}
   m_Name: 
@@ -201,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2607848407479054731
 Transform:
   m_ObjectHideFlags: 0

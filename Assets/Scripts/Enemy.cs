@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+
+        
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log(distance + " " +a);
 
 
-        float b = Mathf.InverseLerp(0.1f, 4.0f, distance);
+        float b = Mathf.InverseLerp(distance, 0.1f, 4.0f );
 
         Debug.Log(b);
 
@@ -78,7 +80,7 @@ public class Enemy : MonoBehaviour
     {
         if (enemyhealth <= 0.0f)
         {
-            Debug.Log("Player is death!!");
+            Debug.Log("Enemy is dead!!");
             Destroy(this.gameObject);
 
         }

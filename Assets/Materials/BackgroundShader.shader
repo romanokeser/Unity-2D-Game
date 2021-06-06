@@ -2,8 +2,8 @@ Shader "Custom/BackgroundShader"
 {
     Properties
     {
-        [HideInInspector] [PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
-        [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
+        [SerializeField] [PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
+        [SerializeField] _Color("Tint", Color) = (1,1,1,1)
         [HideInInspector] _StencilComp("Stencil Comparison", Float) = 8
         [HideInInspector] _Stencil("Stencil ID", Float) = 0
         [HideInInspector] _StencilOp("Stencil Operation", Float) = 0
@@ -114,10 +114,10 @@ Shader "Custom/BackgroundShader"
 
                 fixed4 frag(v2f IN) : SV_Target
                 {
-                    half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
+                    half4 color = (tex2D(_MainTex, IN.texcoord) - _TextureSampleAdd) * IN.color;
 
                     #ifdef UNITY_UI_CLIP_RECT
-                    color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
+                    color.a *= UnityGet2DClipping(IN.worldPosition.xy);
                     #endif
 
                     #ifdef UNITY_UI_ALPHACLIP
@@ -126,7 +126,7 @@ Shader "Custom/BackgroundShader"
 
                     float rad = (atan2(IN.texcoord.y - 1, IN.texcoord.x - 1) + (_DegOFfset / 360 * 6) + 4) % 6 / 5;
                     color.xyz *= HUEtoRGB(rad);
-                    color.xyz += float3(1, 1, 1) * saturate(-abs(abs(distance(float2(0.5, 0.5), IN.texcoord) - _Time.y * _FlashSpeed) % _FlashInterval - _FlashLength) + _FlashLength) * _FlashDensity;
+                    color.xyz += float3(1, 1, 1) * saturate(-abs(abs(distance(float2(0.5, 0.5), IN.texcoord) - _Time.y * _FlashSpeed * color ) % _FlashInterval - _FlashLength) + _FlashLength) * _FlashDensity;
                     //color.xyz = HUEtoRGB(IN.texcoord.y);
                     //color.xyz = HUEtoRGB(_Hue);
 

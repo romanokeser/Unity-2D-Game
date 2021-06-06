@@ -59,7 +59,7 @@ Material:
     - _BumpScale: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
-    - _DegOFfset: 0
+    - _DegOFfset: 24
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FlashDensity: 4

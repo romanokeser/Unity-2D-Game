@@ -24,8 +24,8 @@ public class EnemySpawnController : MonoBehaviour
 
     private void Setup()
     {
-        _timeCounter = 0.0f;
-        _enemySpawnCounter = 0;
+        //_timeCounter = 0.0f;
+        //_enemySpawnCounter = 0;
 
         SpawnEnemy();
     }
@@ -36,9 +36,9 @@ public class EnemySpawnController : MonoBehaviour
 
         if (_timeCounter >= timeToSpawn)
         {
-            _timeCounter = 0.0f;
+            _timeCounter = 2f;
 
-            //SpawnEnemy();
+            SpawnEnemy();
         }
 
     }// end of update
