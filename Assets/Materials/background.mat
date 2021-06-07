@@ -41,8 +41,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 2.12, y: 2.48}
+        m_Offset: {x: 0.08, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -59,13 +59,13 @@ Material:
     - _BumpScale: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
-    - _DegOFfset: 105
+    - _DegOFfset: 95
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlashDensity: -1
-    - _FlashInterval: -1.16
-    - _FlashLength: 0.556
-    - _FlashSpeed: 4
+    - _FlashDensity: 0
+    - _FlashInterval: 0.36
+    - _FlashLength: 0.351
+    - _FlashSpeed: 1.03
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -85,6 +85,6 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5377358, g: 0.26075113, b: 0.26075113, a: 1}
+    - _Color: {r: 0.4811321, g: 0, b: 0.44302264, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

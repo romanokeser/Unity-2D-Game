@@ -145,7 +145,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (playerhealth <= 0.0f)
         {
-            Debug.Log("Player is death!!");
+            Debug.Log("Player is dead!!");
             //SceneManager.LoadScene(0);
             StartCoroutine(DelaySceneLoading());
         }

@@ -2,14 +2,14 @@ Shader "Custom/BackgroundShader"
 {
     Properties
     {
-        [SerializeField] [PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
+        [SerializeField] _MainTex("Sprite Texture", 2D) = "white" {}
         [SerializeField] _Color("Tint", Color) = (1,1,1,1)
         [HideInInspector] _StencilComp("Stencil Comparison", Float) = 8
         [HideInInspector] _Stencil("Stencil ID", Float) = 0
         [HideInInspector] _StencilOp("Stencil Operation", Float) = 0
         [HideInInspector] _StencilWriteMask("Stencil Write Mask", Float) = 255
         [HideInInspector] _StencilReadMask("Stencil Read Mask", Float) = 255
-        [HideInInspector] _ColorMask("Color Mask", Float) = 15
+        [HideInInspector] _ColorMask("Color Mask", Float) = 1
         [HideInInspector][Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip("Use Alpha Clip", Float) = 0
 
             //_Hue("Hue", Range(0, 1)) = 0
@@ -40,9 +40,9 @@ Shader "Custom/BackgroundShader"
                 WriteMask[_StencilWriteMask]
             }
 
-            Cull Off
-            Lighting Off
-            ZWrite Off
+            //Cull Off
+            //Lighting Off
+            //ZWrite Off
             ZTest[unity_GUIZTestMode]
             Blend SrcAlpha OneMinusSrcAlpha
             ColorMask[_ColorMask]

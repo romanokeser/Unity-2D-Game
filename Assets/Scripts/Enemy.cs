@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -22,8 +23,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-
-        
     }
 
     // Update is called once per frame
@@ -40,29 +39,33 @@ public class Enemy : MonoBehaviour
 
     private void ShaderTest()
     {
+        Debug.Log("Enemy health: " + enemyhealth);
+        if (enemyhealth >= 30f & enemyhealth <= 80)
+        {
+            material.color = Color.red;
+        }
+
         float distance = Vector2.Distance(player.transform.position, this.gameObject.transform.position);
 
         //float a = material.GetFloat("_FlashSpeed");
         //Debug.Log(distance + " " +a);
 
-
         float b = Mathf.InverseLerp(distance, 0.1f, 4.0f );
 
-        Debug.Log(b);
+        //Debug.Log(b);
 
         material.SetFloat("_FlashSpeed", b * 1.0f);
-
     }
 
     private void FixedUpdate()
     {
         moveCharacter(movement);
     }
+
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -78,11 +81,13 @@ public class Enemy : MonoBehaviour
 
     private void CheckPlayerHealthStatus()
     {
+        
         if (enemyhealth <= 0.0f)
         {
-            Debug.Log("Enemy is dead!!");
-            Destroy(this.gameObject);
+            Debug.Log("Player is dead!!");
 
+            Destroy(this.gameObject);
+            
         }
     }
 

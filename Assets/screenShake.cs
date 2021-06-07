@@ -19,12 +19,15 @@ public class screenShake : MonoBehaviour
     // The initial position of the GameObject
     Vector3 initialPosition;
 
+    private bool _isShakig;
+    private bool _gameOver;
+
     void Awake()
     {
         if (transform == null)
         {
             transform = GetComponent(typeof(Transform)) as Transform;
-            
+
         }
     }
 
@@ -39,9 +42,14 @@ public class screenShake : MonoBehaviour
         transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 
         shakeDuration -= Time.deltaTime * dampingSpeed;
-               
+
     }
 
+    public void Shake()
+    {
+        //_isShakig = true;
+        //StartCoroutine(shakeMagnitude);
+    }
     public void TriggerShake()
     {
         shakeDuration = 2.0f;

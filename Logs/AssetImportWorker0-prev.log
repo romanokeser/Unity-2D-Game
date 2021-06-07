@@ -1,0 +1,173 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 8097 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/dev/Unity/2D Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50352
+Successfully changed project path to: E:/dev/Unity/2D Game
+E:/dev/Unity/2D Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 75.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/dev/Unity/2D Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   
+    VRAM:     2048 MB
+    Driver:   20.19.15.4835
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004001 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 40.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.734 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.434 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.4 MB.
+System memory in use after: 86.4 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2266.
+Total: 2.318400 ms (FindLiveObjects: 0.190200 ms CreateObjectMapping: 0.079500 ms MarkObjects: 1.826800 ms  DeleteObjects: 0.220300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/EnemyMaterial.mat
+  artifactKey: Guid(0f0da0916ec18f344b0427fb52ab3599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EnemyMaterial.mat using Guid(0f0da0916ec18f344b0427fb52ab3599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e286eecfefe33b58e4342271d049b69a') in 0.135144 seconds
+  Import took 0.140050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/enemyAttack.cs
+  artifactKey: Guid(cdbf340bb655ea64c985df012d8d3d02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/enemyAttack.cs using Guid(cdbf340bb655ea64c985df012d8d3d02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '761bddb5fc99bbe0c481eab165114f43') in 0.029279 seconds
+  Import took 0.034202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/screenShake.cs
+  artifactKey: Guid(89f64bd1610815c4e883e92690deee50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/screenShake.cs using Guid(89f64bd1610815c4e883e92690deee50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f05bc60f5d250e09832aa05eba8ec8') in 0.010810 seconds
+  Import took 0.017064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/RainbowGradient.shader
+  artifactKey: Guid(b4c10598ce2cfd447bd70a43cfde3230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RainbowGradient.shader using Guid(b4c10598ce2cfd447bd70a43cfde3230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723342d21952bd36f21b85188042a956') in 0.020157 seconds
+  Import took 0.027511 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 53.7 MB.
+System memory in use after: 53.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2306.
+Total: 3.407200 ms (FindLiveObjects: 0.260600 ms CreateObjectMapping: 0.096800 ms MarkObjects: 2.907100 ms  DeleteObjects: 0.140800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.351597 seconds.
+  path: Assets/Enemy.prefab
+  artifactKey: Guid(524ba6557445cf542a5cb7675772f4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemy.prefab using Guid(524ba6557445cf542a5cb7675772f4a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '601169e36cfed71a8c69efb53cd24ace') in 0.080253 seconds
+  Import took 0.086833 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001276 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.063 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1812 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2310.
+Total: 2.385400 ms (FindLiveObjects: 0.188100 ms CreateObjectMapping: 0.075100 ms MarkObjects: 1.997100 ms  DeleteObjects: 0.123700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.155614 seconds.
+  path: Assets/EnemyMaterial.mat
+  artifactKey: Guid(0f0da0916ec18f344b0427fb52ab3599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EnemyMaterial.mat using Guid(0f0da0916ec18f344b0427fb52ab3599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd459c69a747c6c4e8de64010307da4f1') in 0.068207 seconds
+  Import took 0.072900 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001288 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.381 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1812 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.5 MB.
+System memory in use after: 89.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2315.
+Total: 3.143700 ms (FindLiveObjects: 0.363500 ms CreateObjectMapping: 0.100500 ms MarkObjects: 2.539000 ms  DeleteObjects: 0.138700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
